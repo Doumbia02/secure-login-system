@@ -59,5 +59,9 @@ def login():
 
     return render_template("login.html")
 
+@app.route("/")
+def home():
+    return redirect("/login")
+
 if __name__ == "__main__":
     app.run(debug=True)
